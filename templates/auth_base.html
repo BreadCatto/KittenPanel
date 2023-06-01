@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/style.css" type="text/css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+  <title>{% block title %}{%endblock %}</title>
+</head>
+<body>
+
+  <div class="navbar">
+    <img class="logo" style="height: 75px;" src="/assets/img/logo.png" alt="">
+    <a class="logo" href="#">PteroClient</a>
+    <ul class="nav-links">
+      <li><a href="/">Login</a></li>
+      <li><a href="/register">Register</a></li>
+
+    </ul>
+    <div class="user-info">
+      <div class="dropdown">
+      <h3 style="color: #0e7eda;">{{ username }}</h3>
+
+        <div class="dropdown-content">
+            <a class="active" href="#">0 Coins</a>
+
+          <a style="color:red" href="/logout">Logout</a>
+        </div>
+      </div>
+    </div>
+    <div class="burger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+</div>
+{% block content %}{% endblock %}
+</body>
+</html>
